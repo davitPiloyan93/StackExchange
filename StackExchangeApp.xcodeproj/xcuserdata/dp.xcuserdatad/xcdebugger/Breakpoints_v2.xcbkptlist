@@ -14,8 +14,8 @@
             filePath = "StackExchangeApp/ViewModels/TagsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "loadMore()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "StackExchangeAppTests/StackExchangeAppTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "test_InitialFetch_ErrorCase()"
             landmarkType = "7">
             <Locations>
@@ -102,79 +102,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "988DC3FB-771F-4758-9FB8-3C85271881ED"
+            uuid = "C4DBE37E-E48E-4B7D-92AE-E18A856515F5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StackExchangeApp/Services/StackExchangeNetworkService.swift"
+            filePath = "StackExchangeApp/Views/TagsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "fetchQuestionsResponse(tagName:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "footerView()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "988DC3FB-771F-4758-9FB8-3C85271881ED - ef140043349a8e9b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for StackExchangeApp.StackExchangeNetworkService.fetchQuestionsResponse(tagName: Swift.String) async throws -&gt; StackExchangeApp.QuestionsResponse"
-                  moduleName = "StackExchangeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dp/Documents/StackExchangeApp/StackExchangeApp/Services/StackExchangeNetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "988DC3FB-771F-4758-9FB8-3C85271881ED - 54476799b17e0f7a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for StackExchangeApp.StackExchangeNetworkService.fetchQuestionsResponse(tagName: Swift.String) async throws -&gt; StackExchangeApp.QuestionsResponse"
-                  moduleName = "StackExchangeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dp/Documents/StackExchangeApp/StackExchangeApp/Services/StackExchangeNetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "988DC3FB-771F-4758-9FB8-3C85271881ED - 5c68477dd13d3299"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for StackExchangeApp.StackExchangeNetworkService.fetchQuestionsResponse(tagName: Swift.String) async throws -&gt; StackExchangeApp.QuestionsResponse"
-                  moduleName = "StackExchangeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dp/Documents/StackExchangeApp/StackExchangeApp/Services/StackExchangeNetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "988DC3FB-771F-4758-9FB8-3C85271881ED - 7203a7fb7c009098"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for StackExchangeApp.StackExchangeNetworkService.fetchQuestionsResponse(tagName: Swift.String) async throws -&gt; StackExchangeApp.QuestionsResponse"
-                  moduleName = "StackExchangeApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dp/Documents/StackExchangeApp/StackExchangeApp/Services/StackExchangeNetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

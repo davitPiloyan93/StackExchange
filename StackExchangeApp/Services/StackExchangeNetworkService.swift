@@ -33,7 +33,7 @@ final class StackExchangeNetworkService: StackExchangeNetworkServiceProtocol {
     }
     
     private func createGetTagsResponseEndPoint(currentPage: Int) -> EndPoint {
-        let path = "/2.3/tags?page\(currentPage)&pagesize=40&order=desc&sort=popular&site=stackoverflow"
+        let path = "/2.3/tags?page=\(currentPage)&pagesize=40&order=desc&sort=popular&site=stackoverflow"
         return EndPoint(baseUrl: baseUrl, path: path)
     }
     

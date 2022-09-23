@@ -8,29 +8,53 @@
 import XCTest
 @testable import StackExchangeApp
 
-final class StackExchangeAppTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+final class StackExchangeServiceMock: StackExchangeServiceProtocol {
+    
+    var tagsResponse: TagsResponse?
+    
+    var errorCase = false
+    
+    func fetchTagsResponse(currentPage: Int) async throws -> TagsResponse {
+        guard !errorCase else {
+            throw AppError.invalidUrl
         }
+        
+        return tagsResponse!
+    }
+}
+
+final class StackExchangeAppTests: XCTestCase {
+    
+    var service: StackExchangeServiceMock!
+    var viewModel: TagsViewModel!
+    
+    override func setUp() async throws {
+        service = StackExchangeServiceMock()
+        viewModel = TagsViewModel(stackExchangeService: service)
+    }
+    
+
+    func test_InitialFetch() async {
+        let tag = Tag(hasSynonyms: false, isModeratorOnly: true, isRequired: false, count: 1, name: "Swift")
+        service.tagsResponse = TagsResponse(items: [tag], hasMore: true, quotaMax: 0, quotaRemaining: 0)
+        await viewModel.initialFetch()
+        
+        XCTAssertEqual(viewModel.tags.first!.name, "Swift")
+        XCTAssertTrue(viewModel.hasMoreItems())
+        
+        
+        service.tagsResponse = TagsResponse(items: [tag], hasMore: false, quotaMax: 0, quotaRemaining: 0)
+        await viewModel.initialFetch()
+        XCTAssertFalse(viewModel.hasMoreItems())
+        
+    }
+    
+    func test_InitialFetch_ErrorCase() async {
+        service.errorCase = true
+        
+        await viewModel.initialFetch()
+        
+        XCTAssertNotNil(viewModel.error)
     }
 
 }

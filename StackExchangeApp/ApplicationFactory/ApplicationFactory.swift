@@ -36,4 +36,11 @@ final class ScreenViewFactoryImpl {
         return TagsView<TagsViewModel>()
             .environmentObject(viewModel)
     }
+    
+    func makeQuestionsView(tagName: String) -> some View {
+        let viewModel = QuestionsViewModel(stackExchangeService: applicationFactory.stackExchangeService,
+                                           tagName: tagName)
+        
+        return QuestionsView(viewModel: viewModel)
+    }
 }

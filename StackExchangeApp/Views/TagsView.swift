@@ -52,8 +52,12 @@ struct TagsView<ViewModel: TagsViewModelProtocol>: View {
                     }
                 }
             }
+            .navigationDestination(for: Tag.self) { tag in
+                screenViewFactory.makeQuestionsView(tagName: tag.name)
+            }
         }
         .navigationTitle(Text("Tags"))
+        
         
     }
     

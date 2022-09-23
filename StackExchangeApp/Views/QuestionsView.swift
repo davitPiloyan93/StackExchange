@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct QuestionsView: View {
+struct QuestionsView<ViewModel: QuestionsViewModelProtocol>: View {
     
-    @StateObject var viewModel: QuestionsViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         

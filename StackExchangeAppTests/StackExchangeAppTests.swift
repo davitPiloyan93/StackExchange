@@ -9,6 +9,10 @@ import XCTest
 @testable import StackExchangeApp
 
 final class StackExchangeServiceMock: StackExchangeServiceProtocol {
+    func fetchQuestionsResponse(tagName: String) async throws -> QuestionsResponse {
+        throw AppError.invalidUrl
+    }
+    
     
     var tagsResponse: TagsResponse?
     

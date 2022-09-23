@@ -10,7 +10,7 @@ import SwiftUI
 struct TagsView<ViewModel: TagsViewModelProtocol>: View {
     
     @Environment(\.verticalSizeClass) var verticalClasses
-    @EnvironmentObject var viewModel: ViewModel
+    @StateObject var viewModel: ViewModel
     
     private func columns() -> [GridItem] {
         let count = verticalClasses == .regular ? 3 : 6
